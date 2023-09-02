@@ -6,35 +6,35 @@ hunger = False
 diet = False
 
 # Logical operators
-# if thirsty:
-#     print("Drink water")
-# else: 
-#     print("I'm not thirsty")
+if thirsty:
+    print("Drink water")
+else: 
+    print("I'm not thirsty")
 
 # # Operator or
-# if thirsty or hunger:
-#     print("Operator or")
-# else: 
-#     print("Thirst and hunger are false")
+if thirsty or hunger:
+    print("Operator or")
+else: 
+    print("Thirst and hunger are false")
 
 # # Operator and
-# if thirsty and hunger:
-#     print("Operator and")
-# else: 
-#     print("Both need be true")
+if thirsty and hunger:
+    print("Operator and")
+else: 
+    print("Both need be true")
 
 # elif
-# if thirsty and hunger:
-#     print("Operator and")
-# elif thirsty and not hunger: 
-#     if diet:
-#         print("Drink water")
-#     else:
-#         print("Only thirsty")
-# elif not thirsty and hunger: 
-#     print("Only hunger")
-# else:
-#     print("Thirst and hunger are false")
+if thirsty and hunger:
+    print("Operator and")
+elif thirsty and not hunger: 
+    if diet:
+        print("Drink water")
+    else:
+        print("Only thirsty")
+elif not thirsty and hunger: 
+    print("Only hunger")
+else:
+    print("Thirst and hunger are false")
 
 # Comparison operators
 num1 = 10
