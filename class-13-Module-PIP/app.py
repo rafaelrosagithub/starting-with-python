@@ -1,5 +1,9 @@
 # Module PIP
 # Install PIP https://pypi.org/project/pip
+# install: pip install beautifulsoup4 # install in the same python installation directory
+# install: pip install beautifulsoup4 -t ./lib # install within the project itself in the lib folder
+# Remove:  pip uninstall beautifulsoup4
+# pip install -r ./requirements.txt -t ./libs # instal all the libs that are inside the requirements.txt file
 
 import tools
 
@@ -8,15 +12,3 @@ print(tools.GRAVITY)
 
 print(tools.get_extension("text.txt"))
 print(tools.highest_number([4, 6, 1, 4, 2]))
-import sys
-
-this_python = sys.version_info[:2]
-min_version = (3, 7)
-if this_python < min_version:
-    message_parts = [
-        "This script does not work on Python {}.{}".format(*this_python),
-        "The minimum supported Python version is {}.{}.".format(*min_version),
-        "Please use https://bootstrap.pypa.io/pip/{}.{}/get-pip.py instead.".format(*this_python),
-    ]
-    print("ERROR: " + " ".join(message_parts))
-    sys.exit(1)
