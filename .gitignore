@@ -179,3 +179,5 @@ ehthumbs.db
 # Other
 .hg/
 .node_modules/
+
+credentials.py
