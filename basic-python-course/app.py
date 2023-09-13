@@ -34,3 +34,6 @@ invoicing_table = invoicing_table[["Invoicing"]].sort_values(by="Invoicing", asc
 print(invoicing_table)
 
 # Step 6 - Calculate the store/city that sold the most (in revenue) - create a graph/dashboard
+stores_table = total_table.groupby("Loja").sum()
+stores_table = stores_table[["Invoicing"]]
+print(stores_table)
