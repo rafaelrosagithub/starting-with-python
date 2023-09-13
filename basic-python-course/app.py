@@ -8,11 +8,11 @@ import os
 root_path = "D:/Rafael/Projects/Courses/Python/Sales"
 
 file_list = os.listdir(root_path)
-print(file_list)
 
 # Step 2 - Import the sales databases
 for file in file_list:
-    print(f"{root_path}/{file}")
+    if "sales" in file.lower():
+        print(f"{root_path}/{file}")
 
 # Step 3 - Treat/Compile the databases
 
