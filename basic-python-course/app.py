@@ -3,6 +3,11 @@
 # Step 0 - Understand the challenge we want to solve
 
 # Step 1 - Run all files from the database folder (Sales Folder)
+import os
+
+file_list = os.listdir("D:/Rafael/Projects/Courses/Python/Sales")
+
+print(file_list)
 
 # Step 2 - Import the sales databases
 
