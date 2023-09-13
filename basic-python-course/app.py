@@ -28,5 +28,9 @@ products_table = products_table[["Quantidade Vendida", "Preco Unitario"]].sort_v
 print(products_table)
 
 # Step 5 - Calculate the product that earned the most (in revenue)
+total_table["Invoicing"] = total_table["Quantidade Vendida"] * total_table["Preco Unitario"]
+invoicing_table = total_table.groupby("Produto").sum()
+invoicing_table = invoicing_table[["Invoicing"]].sort_values(by="Invoicing", ascending=False)
+print(invoicing_table)
 
 # Step 6 - Calculate the store/city that sold the most (in revenue) - create a graph/dashboard
