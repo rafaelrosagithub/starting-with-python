@@ -13,3 +13,5 @@
 # Step 5 - Calculate the product that earned the most (in revenue)
 
 # Step 6 - Calculate the store/city that sold the most (in revenue) - create a graph/dashboard
+
+# Step 7 - Create a graph/dashboard
