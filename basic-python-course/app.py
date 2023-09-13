@@ -4,17 +4,22 @@
 
 # Step 1 - Run all files from the database folder (Sales Folder)
 import os
+import pandas as pd
 
 root_path = "D:/Rafael/Projects/Courses/Python/Sales"
 
 file_list = os.listdir(root_path)
 
 # Step 2 - Import the sales databases
+total_table = pd.DataFrame()
+
 for file in file_list:
     if "sales" in file.lower():
-        print(f"{root_path}/{file}")
-
-# Step 3 - Treat/Compile the databases
+        table = pd.read_csv(f"{root_path}/{file}")
+        # Step 3 - Treat/Compile the databases
+        total_table = total_table._append(table)
+print("Total_table")
+print(total_table)
 
 # Step 4 - Calculate the best-selling product (in quantity)
 
