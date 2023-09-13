@@ -5,11 +5,14 @@
 # Step 1 - Run all files from the database folder (Sales Folder)
 import os
 
-file_list = os.listdir("D:/Rafael/Projects/Courses/Python/Sales")
+root_path = "D:/Rafael/Projects/Courses/Python/Sales"
 
+file_list = os.listdir(root_path)
 print(file_list)
 
 # Step 2 - Import the sales databases
+for file in file_list:
+    print(f"{root_path}/{file}")
 
 # Step 3 - Treat/Compile the databases
 
