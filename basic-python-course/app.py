@@ -16,12 +16,16 @@ total_table = pd.DataFrame()
 for file in file_list:
     if "sales" in file.lower():
         table = pd.read_csv(f"{root_path}/{file}")
-        # Step 3 - Treat/Compile the databases
         total_table = total_table._append(table)
-print("Total_table")
-print(total_table)
+
+# Step 3 - Treat/Compile the databases
+# print("Total_table")
+# print(total_table)
 
 # Step 4 - Calculate the best-selling product (in quantity)
+products_table = total_table.groupby("Produto").sum()
+products_table = products_table[["Quantidade Vendida", "Preco Unitario"]].sort_values(by="Quantidade Vendida", ascending=False)
+print(products_table)
 
 # Step 5 - Calculate the product that earned the most (in revenue)
 
