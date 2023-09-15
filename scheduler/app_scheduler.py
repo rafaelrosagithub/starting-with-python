@@ -1,8 +1,9 @@
 import schedule
 import time
 from datetime import datetime, time as tm
+from schedule import repeat, every
 
-
+@repeat(every().second)
 def task():
     print(f"Task running... {datetime.now()}")
 
@@ -11,7 +12,7 @@ def task():
 # schedule.every().day.at("15:41").do(task)
 # schedule.every().hour.at(":42").do(task)
 # schedule.every().second.until("15:44").do(task)
-schedule.every().second.until(tm(15, 57, 5)).do(task)
+# schedule.every().second.until(tm(15, 57, 5)).do(task)
 
 while True:
     schedule.run_pending()
