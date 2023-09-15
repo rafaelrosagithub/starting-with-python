@@ -13,6 +13,7 @@ pip3 --version
 # install: pip install beautifulsoup4 -t ./lib # install within the project itself in the lib folder
 # Remove:  pip uninstall beautifulsoup4
 # pip install -r ./requirements.txt -t ./libs # instal all the libs that are inside the requirements.txt file
+# pip freeze > "requeriments.txt" to generate requirements file with all the libs that the app is using
 *****************************************************************************
 # Intall python extension in vscode
 # ms-python.python, with this plugin we can have:
